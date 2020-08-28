@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Deploy
-        run: sbt stage
+        run: sbt stage deployHeroku
 
       
