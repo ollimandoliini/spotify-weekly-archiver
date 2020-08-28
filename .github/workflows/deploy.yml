@@ -8,10 +8,8 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     steps:
-      -  uses: matankdr/github-docker-sbt@openjdk8_alpine_sbt1_3_8_2
-      -  run: |
-          ls
-          sbt update
-          sbt stage deployHeroku
+      - uses: actions/checkout@v2
+      - name: Deploy
+        run: sbt stage
 
       
