@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Scala SBT Action
         uses: matankdr/github-docker-sbt@openjdk8_alpine_sbt1_3_8_2
-        run: |
+        with: |
           sbt update
           sbt stage deployHeroku
 
