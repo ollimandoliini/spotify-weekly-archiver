@@ -22,7 +22,11 @@ herokuAppName in Compile := "spotify-weekly-archiver"
 
 // Want to use a published library in your project?
 // You can define other libraries as dependencies in your build like this:
-libraryDependencies += "org.typelevel" %% "cats-core" % "2.0.0"
+libraryDependencies ++= Seq(
+  "org.typelevel" %% "cats-core" % "2.0.0",
+  "com.lihaoyi" %% "requests" % "0.6.5",
+  "com.lihaoyi" %% "ujson" % "0.9.5"
+)
 
 enablePlugins(JavaAppPackaging)
 
